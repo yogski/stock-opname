@@ -1,5 +1,5 @@
 // External dependencies
-import { Input, Table, Space, Button, Popover, Modal } from 'antd';
+import { Input, Table, Space, Button, Popover, Modal, Row, Col } from 'antd';
 import { DeleteFilled, EditFilled } from '@ant-design/icons';
 import {useEffect, useState} from 'react'
 import { CSVLink } from "react-csv";
@@ -160,27 +160,28 @@ export default function Home() {
           </Button>,
         ]}
       >
-        <Input 
-          id="editFormCode" 
-          name="editFormCode" 
-          value={formInputs.editFormCode} 
-          allowClear
-          onChange={handleInputs}
-        />
-        <Input 
-          id="editFormName" 
-          name="editFormName" 
-          value={formInputs.editFormName}
-          allowClear
-          onChange={handleInputs}
-        />
-        <Input 
-          id="editFormQuantity" 
-          name="editFormQuantity" 
-          value={formInputs.editFormQuantity}
-          allowClear
-          onChange={handleInputs}
-        />
+        <Space direction="vertical" style={{ width: "100%" }}>
+          <Row>
+          <label>Name</label>
+          <Input 
+            id="editFormName" 
+            name="editFormName" 
+            value={formInputs.editFormName}
+            allowClear
+            onChange={handleInputs}
+          />
+          </Row>
+          <Row>
+          <label>Quantity</label>
+          <Input 
+            id="editFormQuantity" 
+            name="editFormQuantity" 
+            value={formInputs.editFormQuantity}
+            allowClear
+            onChange={handleInputs}
+          />
+          </Row>
+        </Space>
       </Modal>
     )
   }
@@ -296,7 +297,7 @@ export default function Home() {
         </Space>
         
       }
-      <Table columns={columns} dataSource={inventoryData} />
+      <Table className={styles.tableDisplay} columns={columns} dataSource={inventoryData} />
       
     </div>
     </>

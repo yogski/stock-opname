@@ -123,5 +123,12 @@
 }
 
 .searchbar {
-  width: 60%;
+  width: 50%;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+.tableDisplay {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
 }
