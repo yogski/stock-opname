@@ -19,7 +19,8 @@
     "type-check": "tsc",
     "lint": "eslint --ignore-path .gitignore \"src/**/*.+(ts|js|tsx)\"",
     "format": "prettier --ignore-path .gitignore \"src/**/*.+(ts|js|tsx)\" --write",
-    "postinstall": "husky install"
+    "postinstall": "husky install",
+    "copy-gh": "cp -a ./out/. ../yogski.github.io/stock-opname"
   },
   "lint-staged": {
     "./src/**/*.{ts,js,jsx,tsx}": [

@@ -5,7 +5,7 @@ export function saveInventory(data : any[]) {
     key = getKey();
   } else {
     key = Number(d).toString(16);
-    localStorage.setItem('keymaster',key);
+    localStorage.setItem('k__',key);
   }
   localStorage.setItem(key, JSON.stringify(data));
 }
@@ -17,7 +17,7 @@ export function getInventory() {
 }
 
 function getKey() {
-  return localStorage.getItem('keymaster');
+  return localStorage.getItem('k__');
 }
 
 export function clearInventory() {
